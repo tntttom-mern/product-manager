@@ -12,7 +12,7 @@ export default (props) => {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    axios.get("http://localhost:8000/products").then((res) => {
+    axios.get("http://localhost:8000/api/products").then((res) => {
       setProductList(res.data);
       console.log(res);
       setLoaded(true);
@@ -21,7 +21,7 @@ export default (props) => {
 
   const createProduct = ({ title, price, description }) => {
     axios
-      .post("http://localhost:8000/products/new", {
+      .post("http://localhost:8000/api/products/new", {
         title,
         price,
         description,

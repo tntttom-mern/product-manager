@@ -11,7 +11,7 @@ export default (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/product/${props.id}`)
+      .get(`http://localhost:8000/api/product/${props.id}`)
       .then((res) =>
         setProduct({
           ...res.data[0],

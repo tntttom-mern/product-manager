@@ -6,7 +6,7 @@ export default (props) => {
 
   const deletePerson = (e) => {
     axios
-      .delete(`http://localhost:8000/product/${productId}`)
+      .delete(`http://localhost:8000/api/product/${productId}`)
       .then(successCallback())
       .catch((err) => console.log("Error deleting product", err));
   };

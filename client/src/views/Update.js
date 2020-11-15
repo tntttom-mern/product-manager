@@ -19,7 +19,7 @@ export default (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/product/${id}`)
+      .get(`http://localhost:8000/api/product/${id}`)
       .then((res) => {
         console.log(res.data);
         setProduct(res.data[0]);
@@ -34,7 +34,7 @@ export default (props) => {
 
   const updateHandler = ({ title, price, description }) => {
     axios
-      .put(`http://localhost:8000/product/${id}`, {
+      .put(`http://localhost:8000/api/product/${id}`, {
         title,
         price,
         description,
